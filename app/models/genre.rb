@@ -12,6 +12,7 @@ class Genre < ActiveRecord::Base
     artist = self.songs.collect do |x|
       x.artists
     end
+    artist.count
   end
 
   def all_artist_names
